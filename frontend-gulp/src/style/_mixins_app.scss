@@ -1,0 +1,13 @@
+// Складируйте сюда все миксины, используемые на сайте
+
+
+@mixin btn-red {
+  @include button-base();
+  @include button-style(#ff0000, rgba(255, 0, 0, 0.6));
+
+  font-size: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  margin: 0;
+  line-height: 1.5;
+}

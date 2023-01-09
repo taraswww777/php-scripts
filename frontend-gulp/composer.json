@@ -1,0 +1,19 @@
+{
+	"name": "taraswww777/frontend-gulp",
+	"authors": [
+		{
+			"name": "taraswww777",
+			"email": "taraswww777@mail.ru"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"FrontendGulp\\Api\\": "Api/"
+		}
+	},
+
+	"minimum-stability": "dev",
+	"require": {
+		"jenssegers/blade": "^1.1"
+	}
+}

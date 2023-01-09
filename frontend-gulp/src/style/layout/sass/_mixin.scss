@@ -1,0 +1,62 @@
+@mixin breakpoint_max($value) {
+  @media only screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin breakpoint_min($value) {
+  @media only screen and(min-width: $value) {
+    @content;
+  }
+}
+
+@mixin breakpoint_max_min($min,$max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+
+@mixin breakpoint_xs() {
+  @include breakpoint_max($screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint_sm() {
+  @include breakpoint_max_min($screen-sm-min, $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint_md() {
+  @include breakpoint_max_min($screen-md-min, $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint_lg() {
+  @include breakpoint_min($screen-lg-min) {
+    @content;
+  }
+}

@@ -1,0 +1,74 @@
+
+.forms {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  //justify-content: s;
+  background-color: #fff;
+  box-shadow: 0 0 5px #000;
+}
+
+#feedback {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.form-order {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 15px;
+    font-size: 20px;
+    justify-content: space-between;
+  }
+
+  &__label,
+  &__input {
+    width: 50%;
+
+    @include breakpoint_xs() {
+      width: 100%;
+    }
+  }
+}
+
+.forms h1 {
+  margin-bottom: 25px;
+}
+
+.forms {
+  padding: 25px;
+}
+
+.forms input {
+  float: right;
+  padding: 5px;
+  border: 0;
+  border-bottom: 3px solid;
+}
+
+.forms input:focus {
+  border: 0;
+  border-bottom: 3px solid red;
+}
+
+.forms .buttonss {
+  margin-top: 30px;
+}
+
+.forms button {
+  border: 1px solid #000;
+  font-size: 14px;
+  color: #000;
+  padding: 5px 20px 5px 20px;
+
+}

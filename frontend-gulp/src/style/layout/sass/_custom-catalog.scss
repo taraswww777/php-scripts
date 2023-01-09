@@ -1,0 +1,33 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0 0;
+
+  &__filter {
+    margin: 0 0 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    width: calc(26% - 10px);
+    overflow: hidden;
+    margin: 0 20px 40px;
+
+    @include breakpoint_sm() {
+      width: calc(40% - 10px);
+    }
+    @include breakpoint_xs() {
+      width: calc(90% - 10px);
+    }
+  }
+
+  &__nav {
+    width: 100%;
+  }
+}

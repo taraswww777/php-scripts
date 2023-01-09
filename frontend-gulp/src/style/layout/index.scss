@@ -1,0 +1,19 @@
+@import '../style';
+//@import '../../../node_modules/font-awesome/scss/font-awesome';
+
+@include site-fonts();
+@include foundation-global-styles();
+@include normalize();
+
+body {
+	// Почему минимальная ширина не прописана в foundation не знаю, но она нужна, поэтому пришлось запихнуть в этот файл
+	min-width: 320px;
+}
+
+main {
+	//Если есть сомнения о необходимости примения стилей ко всему содержимому тега, то переносим в нужные блоки/элементы
+	@include wysiwyg;
+}
+
+@import "sass/index";
+@import "../../block/common/index";
